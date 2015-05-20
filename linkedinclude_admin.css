@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+	=Admin
+--------------------------------------------------------------*/
+#linkedinclude {
+	position: relative;
+}
+#linkedinclude > h1 > span {
+	font-weight: 400;
+}
+#linkedinclude section article {
+  background: #FFF;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  border: 1px solid #DADADA;
+  box-shadow: 1px 2px 0 #EAEAEA;
+  border-radius: 2px;
+}
+#linkedinclude section article.unchecked {
+	opacity: .4;
+}
+#linkedinclude aside {
+	float: right;
+	margin-top: 5px;
+}
+#linkedinclude section article div {
+	position: relative;
+	padding-left: 160px;
+	min-height: 90px;
+	overflow: auto;
+}
+#linkedinclude section article div img {
+	position: absolute;
+	left: 0;
+}
+#linkedinclude article h1 {
+  font-size: 23px;
+  font-weight: 400;
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 15px;
+  margin: 5px 0 10px;
+}
+#linkedinclude article h1 input[type='checkbox'] {
+	margin-right: 10px;
+}
+#linkedinclude h1 a {
+	color: #222;
+	text-decoration: none;
+}
+#linkedinclude form.fetch {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-weight: 600;
+}
+#linkedinclude form.fetch input[type='text'] {
+	width: 100px;
+	font-weight: 400;
+}
+#linkedinclude form.fetch input[type='submit'] {
+	background: #BD4825;
+  border: 0;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+#linkedinclude .msg {
+	  background: #638063;
+  padding: 10px 10px;
+  margin: 0 10px 10px 0;
+  color: #FFF;
+}
+#linkedinclude .msg.err {
+	background: #BD4825;
+}

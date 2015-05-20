@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+	=Widget
+--------------------------------------------------------------*/
+.widget_linkedinclude_widget ul {
+	list-style: none;
+	margin-left: 0;
+}
+.widget_linkedinclude_widget ul li {
+	padding-top: 15px;
+	border-top: 1px solid gainsboro;
+}
+.widget_linkedinclude_widget ul li:first-child {
+	padding: 0;
+	border: 0;
+}
+.widget_linkedinclude_widget ul h5 {
+	margin: 8px 0 2px;
+	font-size: .9em;
+}
+.widget_linkedinclude_widget ul p {
+  font-size: .75em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+.widget_linkedinclude_widget ul p a.limore {
+	font-weight: bold;
+	display: block;
+}
