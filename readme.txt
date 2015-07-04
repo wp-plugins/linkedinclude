@@ -51,5 +51,8 @@ If you wish. Sure.
 
 == Changelog ==
 
+= 0.9.1 =
+* Suppressed warnings about linkedin articles published without body copy
+
 = 0.9.0 =
 * Plugin-out only in beta, currently. Standby for official release.

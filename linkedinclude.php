@@ -3,7 +3,7 @@
 Plugin Name: LinkedInclude
 Plugin URI: http://wordpress.org/plugins/linkedinclude/
 Description: Post Importer for LinkedIn
-Version: 0.9.0
+Version: 0.9.1
 Author: era404
 Author URI: http://www.era404.com
 License: GPLv2 or later.
@@ -209,7 +209,8 @@ function showLinkedInArticles(){
 			 	  </aside>
 			 <h1><input type='checkbox' data-liid='{$p['li_id']}' class='li_display' value='1' ".($p['li_display'] > 0 ? "checked='checked'":"")." title='Show/Hide' /><a href='{$p['li_href']}' title='{$p['li_title']}' target='_blank'>{$p['li_title']}</a></h1>".
 			 "<div><img src='{$p['li_image']}' alt='{$p['li_title']}' height='80' />"."<strong>".date("l, F jS, Y",$p['li_date'])." &ndash; </strong>".
-			 substr($p['li_content'], 0, strpos($p['li_content'], ' ', 500))."...</div></article>";
+			 substr($p['li_content'], 0, @strpos($p['li_content'], ' ', 500)).
+			 "...</div></article>";
 		}
 	} else { echo "<article>No LinkedIn posts have been imported yet. Enter a valid Author ID and click FETCH POSTS.</article>"; }
 	echo "</section>";
@@ -266,7 +267,9 @@ class linkedinclude_widget extends WP_Widget {
 					src='{$p['li_image']}'>
 				</a>
 				<h5><a href='{$p['li_href']}' title='{$p['li_title']}' target='_blank'>{$p['li_title']}</a></h5>
-				<p>".date("M j, Y",$p['li_date'])." &ndash; ".substr($p['li_content'], 0, strpos($p['li_content'], ' ', $length))."... <a href='{$p['li_href']}' class='limore' target='_blank' title='{$p['li_title']}'>Read More &raquo;</a></p>";
+				<p>".date("M j, Y",$p['li_date'])." &ndash; ".
+					substr($p['li_content'], 0, @strpos($p['li_content'], ' ', $length)).
+					"... <a href='{$p['li_href']}' class='limore' target='_blank' title='{$p['li_title']}'>Read More &raquo;</a></p>";
 			}
 			if($author) echo "<li><p><a href='https://www.linkedin.com/today/author/{$author}' title='All posts on LinkedIn' target='_blank' class='limore'>View All LinkedIn Posts &raquo;</a></p></li>";
 			echo "</ul>";
